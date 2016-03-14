@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="BenchMANAGERDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="BenchMANAGERDBModelStoreContainer">
+          <EntitySet Name="BenchEmployee" EntityType="BenchMANAGERDBModel.Store.BenchEmployee" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Employee" EntityType="BenchMANAGERDBModel.Store.Employee" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="BenchEmployee">
+          <Key>
+            <PropertyRef Name="BenchEmployeeId" />
+          </Key>
+          <Property Name="BenchEmployeeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeNumber" Type="int" Nullable="false" />
+          <Property Name="Practice" Type="varchar" MaxLength="50" />
+          <Property Name="SPOC" Type="varchar" MaxLength="50" />
+          <Property Name="PotentialAccount" Type="varchar" MaxLength="50" />
+          <Property Name="ProjectCode" Type="varchar" MaxLength="50" />
+          <Property Name="StartDate" Type="datetime" />
+          <Property Name="EndDate" Type="datetime" />
+          <Property Name="Utilization" Type="int" />
+          <Property Name="LocationType" Type="varchar" MaxLength="50" />
+          <Property Name="Location" Type="varchar" MaxLength="50" />
+          <Property Name="AssignmentStatus" Type="varchar" MaxLength="50" />
+          <Property Name="Comments" Type="varchar(max)" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="ChangedDate" Type="datetime" />
+          <Property Name="ChangedBy" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="EmployeeId" />
+          </Key>
+          <Property Name="EmployeeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeNumber" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="MiddleName" Type="varchar" MaxLength="50" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" />
+          <Property Name="UserName" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Gender" Type="nchar" MaxLength="10" />
+          <Property Name="Grade" Type="int" />
+          <Property Name="LocationType" Type="varchar" MaxLength="50" />
+          <Property Name="Location" Type="varchar" MaxLength="50" />
+          <Property Name="EmployeeType" Type="varchar" MaxLength="50" />
+          <Property Name="Designation" Type="varchar" MaxLength="200" />
+          <Property Name="DateOfBirth" Type="datetime" Nullable="false" />
+          <Property Name="DateOfJoin" Type="datetime" Nullable="false" />
+          <Property Name="PreviousExperience" Type="float" />
+          <Property Name="PassportNumber" Type="varchar" MaxLength="50" />
+          <Property Name="Visa" Type="varchar" MaxLength="50" />
+          <Property Name="BusinessGroup" Type="varchar" MaxLength="50" />
+          <Property Name="CostCenter" Type="varchar" MaxLength="50" />
+          <Property Name="Practice" Type="varchar" MaxLength="50" />
+          <Property Name="MasterSkillSet" Type="varchar" MaxLength="50" />
+          <Property Name="PrimarySkills" Type="varchar" MaxLength="200" />
+          <Property Name="SecondarySkills" Type="varchar" MaxLength="200" />
+          <Property Name="ResourceStatus" Type="varchar" MaxLength="50" />
+          <Property Name="ReservationStatus" Type="varchar" MaxLength="50" />
+          <Property Name="AssignmentStatus" Type="varchar" MaxLength="50" />
+          <Property Name="Supervisor" Type="varchar" MaxLength="50" />
+          <Property Name="ProjectManager" Type="varchar" MaxLength="50" />
+          <Property Name="Utilization" Type="int" />
+          <Property Name="IsServicingNoticePeriod" Type="bit" Nullable="false" />
+          <Property Name="IsTravelReady" Type="bit" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="RelievingDate" Type="datetime" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="ChangedDate" Type="datetime" />
+          <Property Name="ChangedBy" Type="varchar" MaxLength="50" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BenchMANAGERDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="EmployeeId" />
+          </Key>
+          <Property Name="EmployeeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeNumber" Type="Int32" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MiddleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Gender" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Grade" Type="Int32" />
+          <Property Name="LocationType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EmployeeType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Designation" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="DateOfBirth" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DateOfJoin" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PreviousExperience" Type="Double" />
+          <Property Name="PassportNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Visa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BusinessGroup" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CostCenter" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Practice" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MasterSkillSet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PrimarySkills" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SecondarySkills" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ResourceStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ReservationStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AssignmentStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Supervisor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ProjectManager" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Utilization" Type="Int32" />
+          <Property Name="IsServicingNoticePeriod" Type="Boolean" Nullable="false" />
+          <Property Name="IsTravelReady" Type="Boolean" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="RelievingDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ChangedDate" Type="DateTime" Precision="3" />
+          <Property Name="ChangedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="BenchMANAGERDBEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Employees" EntityType="Self.Employee" />
+          <EntitySet Name="BenchEmployees" EntityType="BenchMANAGERDBModel.BenchEmployee" />
+        </EntityContainer>
+        <EntityType Name="BenchEmployee">
+          <Key>
+            <PropertyRef Name="BenchEmployeeId" />
+          </Key>
+          <Property Name="BenchEmployeeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeNumber" Type="Int32" Nullable="false" />
+          <Property Name="Practice" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SPOC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PotentialAccount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ProjectCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StartDate" Type="DateTime" Precision="3" />
+          <Property Name="EndDate" Type="DateTime" Precision="3" />
+          <Property Name="Utilization" Type="Int32" />
+          <Property Name="LocationType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AssignmentStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ChangedDate" Type="DateTime" Precision="3" />
+          <Property Name="ChangedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BenchMANAGERDBModelStoreContainer" CdmEntityContainer="BenchMANAGERDBEntities1">
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="BenchMANAGERDBModel.Employee">
+              <MappingFragment StoreEntitySet="Employee">
+                <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+                <ScalarProperty Name="EmployeeNumber" ColumnName="EmployeeNumber" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Grade" ColumnName="Grade" />
+                <ScalarProperty Name="LocationType" ColumnName="LocationType" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="EmployeeType" ColumnName="EmployeeType" />
+                <ScalarProperty Name="Designation" ColumnName="Designation" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="DateOfJoin" ColumnName="DateOfJoin" />
+                <ScalarProperty Name="PreviousExperience" ColumnName="PreviousExperience" />
+                <ScalarProperty Name="PassportNumber" ColumnName="PassportNumber" />
+                <ScalarProperty Name="Visa" ColumnName="Visa" />
+                <ScalarProperty Name="BusinessGroup" ColumnName="BusinessGroup" />
+                <ScalarProperty Name="CostCenter" ColumnName="CostCenter" />
+                <ScalarProperty Name="Practice" ColumnName="Practice" />
+                <ScalarProperty Name="MasterSkillSet" ColumnName="MasterSkillSet" />
+                <ScalarProperty Name="PrimarySkills" ColumnName="PrimarySkills" />
+                <ScalarProperty Name="SecondarySkills" ColumnName="SecondarySkills" />
+                <ScalarProperty Name="ResourceStatus" ColumnName="ResourceStatus" />
+                <ScalarProperty Name="ReservationStatus" ColumnName="ReservationStatus" />
+                <ScalarProperty Name="AssignmentStatus" ColumnName="AssignmentStatus" />
+                <ScalarProperty Name="Supervisor" ColumnName="Supervisor" />
+                <ScalarProperty Name="ProjectManager" ColumnName="ProjectManager" />
+                <ScalarProperty Name="Utilization" ColumnName="Utilization" />
+                <ScalarProperty Name="IsServicingNoticePeriod" ColumnName="IsServicingNoticePeriod" />
+                <ScalarProperty Name="IsTravelReady" ColumnName="IsTravelReady" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="RelievingDate" ColumnName="RelievingDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ChangedDate" ColumnName="ChangedDate" />
+                <ScalarProperty Name="ChangedBy" ColumnName="ChangedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BenchEmployees">
+            <EntityTypeMapping TypeName="BenchMANAGERDBModel.BenchEmployee">
+              <MappingFragment StoreEntitySet="BenchEmployee">
+                <ScalarProperty Name="ChangedBy" ColumnName="ChangedBy" />
+                <ScalarProperty Name="ChangedDate" ColumnName="ChangedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="AssignmentStatus" ColumnName="AssignmentStatus" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="LocationType" ColumnName="LocationType" />
+                <ScalarProperty Name="Utilization" ColumnName="Utilization" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="ProjectCode" ColumnName="ProjectCode" />
+                <ScalarProperty Name="PotentialAccount" ColumnName="PotentialAccount" />
+                <ScalarProperty Name="SPOC" ColumnName="SPOC" />
+                <ScalarProperty Name="Practice" ColumnName="Practice" />
+                <ScalarProperty Name="EmployeeNumber" ColumnName="EmployeeNumber" />
+                <ScalarProperty Name="BenchEmployeeId" ColumnName="BenchEmployeeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

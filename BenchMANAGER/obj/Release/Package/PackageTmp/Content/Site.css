@@ -1,0 +1,124 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+.webGrid {
+        margin: 4px;
+        border-collapse: collapse;
+        width: 600px;
+        background-color: #2AD4FF;
+        color: #000;
+        height:500px;
+    }
+
+.webGrid a{
+    color:#000;
+    text-decoration:underline;
+}
+
+.webGrid a:hover
+{
+    text-decoration:none;
+}
+    .header {
+        background-color: #3F95C5;
+        font-weight: bold;
+        color: #000;
+    }
+    .header a{
+        text-decoration:none;
+    }
+    .webGrid th, .webGrid td {
+        border: 1px solid #FFFFFF;
+        padding: 5px;
+    }
+
+    .alt {
+        background-color: #DEEDF5;
+        color: #000;
+    }
+
+    /*.gridHead a:hover {
+        text-decoration: underline;
+    }*/
+
+    .description {
+        width: auto;
+    }
+
+    .select {
+        background-color: #71857C;
+    }
+
+    .employeeDetails {
+        position:relative;
+        width: 400px;
+        height: 500px;
+        border: 1px solid #000;
+    }
+    .divHeader {
+
+        margin:5px;
+        border-bottom:1px solid #000;
+        font-weight:bold;
+        font-size:14px;
+        height:40px;
+    }
+
+    .EmpnameAutoComplete
+    {
+        margin: 0px 100px 0px 0px;
+        float:right;
+        width:160px;
+    }
+
+    .benchWebGrid
+    {
+        margin: 4px;
+        border-collapse: collapse;
+        width: 1100px;
+        background-color: #2AD4FF;
+        color: #000;
+    }
+     .benchWebGrid th, .benchWebGrid td {
+        border: 1px solid #FFFFFF;
+        padding: 5px;
+    }
+    .benchWebGrid a{
+    color:#000;
+    
+}
+
+.selectedEmployeeLink {
+    color:#000;
+    text-decoration:underline;
+    
+}
+
+    .selectedEmployeeLink:hover {
+        cursor:pointer;
+        text-decoration:none;
+    }
+

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BenchMANAGERDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmployeeId" />
+    </Key>
+    <Property Name="EmployeeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeNumber" Type="Int32" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MiddleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Grade" Type="Int32" />
+    <Property Name="LocationType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EmployeeType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Designation" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="DateOfBirth" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateOfJoin" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PreviousExperience" Type="Double" />
+    <Property Name="PassportNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Visa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BusinessGroup" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CostCenter" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Practice" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MasterSkillSet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PrimarySkills" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="SecondarySkills" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ResourceStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ReservationStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AssignmentStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Supervisor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ProjectManager" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Utilization" Type="Int32" />
+    <Property Name="IsServicingNoticePeriod" Type="Boolean" Nullable="false" />
+    <Property Name="IsTravelReady" Type="Boolean" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="RelievingDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ChangedDate" Type="DateTime" Precision="3" />
+    <Property Name="ChangedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="BenchMANAGERDBEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <EntitySet Name="BenchEmployees" EntityType="BenchMANAGERDBModel.BenchEmployee" />
+  </EntityContainer>
+  <EntityType Name="BenchEmployee">
+    <Key>
+      <PropertyRef Name="BenchEmployeeId" />
+    </Key>
+    <Property Name="BenchEmployeeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeNumber" Type="Int32" Nullable="false" />
+    <Property Name="Practice" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SPOC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PotentialAccount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ProjectCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Precision="3" />
+    <Property Name="Utilization" Type="Int32" />
+    <Property Name="LocationType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AssignmentStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ChangedDate" Type="DateTime" Precision="3" />
+    <Property Name="ChangedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

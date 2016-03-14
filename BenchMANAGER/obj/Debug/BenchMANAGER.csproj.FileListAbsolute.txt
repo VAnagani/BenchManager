@@ -1,0 +1,59 @@
+D:\TfsWorkspaces\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\BenchMANAGER.dll
+D:\TfsWorkspaces\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\BenchMANAGER.pdb
+D:\TfsWorkspaces\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\Antlr3.Runtime.dll
+D:\TfsWorkspaces\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\EntityFramework.dll
+D:\TfsWorkspaces\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\EntityFramework.SqlServer.dll
+D:\TfsWorkspaces\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\Microsoft.Web.Infrastructure.dll
+D:\TfsWorkspaces\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\Newtonsoft.Json.dll
+D:\TfsWorkspaces\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\System.Web.Helpers.dll
+D:\TfsWorkspaces\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\System.Web.Mvc.dll
+D:\TfsWorkspaces\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\System.Web.Optimization.dll
+D:\TfsWorkspaces\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\System.Web.Razor.dll
+D:\TfsWorkspaces\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\System.Web.WebPages.Deployment.dll
+D:\TfsWorkspaces\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\System.Web.WebPages.dll
+D:\TfsWorkspaces\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\System.Web.WebPages.Razor.dll
+D:\TfsWorkspaces\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\WebGrease.dll
+D:\TfsWorkspaces\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\EntityFramework.xml
+D:\TfsWorkspaces\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\EntityFramework.SqlServer.xml
+D:\TfsWorkspaces\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\System.Web.Helpers.xml
+D:\TfsWorkspaces\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\System.Web.Mvc.xml
+D:\TfsWorkspaces\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\System.Web.Optimization.xml
+D:\TfsWorkspaces\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\System.Web.Razor.xml
+D:\TfsWorkspaces\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\System.Web.WebPages.xml
+D:\TfsWorkspaces\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\System.Web.WebPages.Deployment.xml
+D:\TfsWorkspaces\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\System.Web.WebPages.Razor.xml
+D:\TfsWorkspaces\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\Antlr3.Runtime.pdb
+D:\TfsWorkspaces\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\Newtonsoft.Json.xml
+D:\TfsWorkspaces\BenchMANAGER\BenchMANAGER\BenchMANAGER\obj\Debug\BenchMANAGER.dll
+D:\TfsWorkspaces\BenchMANAGER\BenchMANAGER\BenchMANAGER\obj\Debug\BenchMANAGER.pdb
+D:\TfsWorkspaces\BenchMANAGER\BenchMANAGER\BenchMANAGER\obj\Debug\BenchMANAGER.csprojResolveAssemblyReference.cache
+E:\My stuff\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\BenchMANAGER.dll.config
+E:\My stuff\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\BenchMANAGER.dll
+E:\My stuff\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\BenchMANAGER.pdb
+E:\My stuff\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\Antlr3.Runtime.dll
+E:\My stuff\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\EntityFramework.dll
+E:\My stuff\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\EntityFramework.SqlServer.dll
+E:\My stuff\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\Microsoft.Web.Infrastructure.dll
+E:\My stuff\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\Newtonsoft.Json.dll
+E:\My stuff\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\System.Web.Helpers.dll
+E:\My stuff\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\System.Web.Mvc.dll
+E:\My stuff\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\System.Web.Optimization.dll
+E:\My stuff\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\System.Web.Razor.dll
+E:\My stuff\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\System.Web.WebPages.Deployment.dll
+E:\My stuff\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\System.Web.WebPages.dll
+E:\My stuff\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\System.Web.WebPages.Razor.dll
+E:\My stuff\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\WebGrease.dll
+E:\My stuff\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\EntityFramework.xml
+E:\My stuff\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\EntityFramework.SqlServer.xml
+E:\My stuff\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\System.Web.Helpers.xml
+E:\My stuff\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\System.Web.Mvc.xml
+E:\My stuff\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\System.Web.Optimization.xml
+E:\My stuff\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\System.Web.Razor.xml
+E:\My stuff\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\System.Web.WebPages.xml
+E:\My stuff\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\System.Web.WebPages.Deployment.xml
+E:\My stuff\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\System.Web.WebPages.Razor.xml
+E:\My stuff\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\Antlr3.Runtime.pdb
+E:\My stuff\BenchMANAGER\BenchMANAGER\BenchMANAGER\bin\Newtonsoft.Json.xml
+E:\My stuff\BenchMANAGER\BenchMANAGER\BenchMANAGER\obj\Debug\BenchMANAGER.csprojResolveAssemblyReference.cache
+E:\My stuff\BenchMANAGER\BenchMANAGER\BenchMANAGER\obj\Debug\BenchMANAGER.dll
+E:\My stuff\BenchMANAGER\BenchMANAGER\BenchMANAGER\obj\Debug\BenchMANAGER.pdb

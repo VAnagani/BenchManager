@@ -1,0 +1,184 @@
+﻿@model  IEnumerable<BenchMANAGER.ViewModels.BenchEmployeeViewModel>
+
+@{
+
+    var benchGrid = new WebGrid(Model, canPage: true, rowsPerPage: 10,
+    selectionFieldName: "selectedRow", ajaxUpdateContainerId: "benchGridContent");
+    //benchGrid.Pager(WebGridPagerModes.All);
+
+}
+
+
+
+@{
+        var locationType = new SelectList(new[]
+        {
+                new SelectListItem { Text = "---Location Type---", Value = "---Location Type---" },
+                new SelectListItem { Text = "OFFSHORE", Value = "OFFSHORE" },
+                new SelectListItem { Text = "ONSITE", Value = "ONSITE"}
+
+            }, "Value", "Text");
+
+
+
+
+}
+
+@{
+    var location = new SelectList(new[]
+    {
+                new SelectListItem { Text = "---Location---", Value = "---Location---" },
+                new SelectListItem { Text = "Bangalore", Value = "Bangalore" },
+                new SelectListItem { Text = "Chennai", Value = "Chennai"},
+                new SelectListItem { Text = "Hyderabad", Value = "Hyderabad" },
+                new SelectListItem { Text = "SVO", Value = "SVO"},
+                new SelectListItem { Text = "UAE", Value = "UAE" },
+                new SelectListItem { Text = "Virginia", Value = "Virginia"}
+
+            }, "Value", "Text");
+}
+
+@{
+    var assignmentStatus = new SelectList(new[]
+    {
+                new SelectListItem { Text = "---Status---", Value = "---Status---" },
+                new SelectListItem { Text = "Billed", Value = "Billed" },
+                new SelectListItem { Text = "ITS Support", Value = "ITS Support"},
+                new SelectListItem { Text = "Non-Billed", Value = "Non-Billed" },
+
+
+            }, "Value", "Text");
+}
+
+@*@using (Ajax.BeginForm("AddResources", "Bench", null,
+                                        new AjaxOptions
+                                        {
+                                            InsertionMode = InsertionMode.Replace,
+                                            OnBegin = "callback",
+                                            HttpMethod = "POST",
+                                            UpdateTargetId = "benchGridContent",
+                                        }))
+{
+}*@
+<div id="benchGridContent">
+    @benchGrid.GetHtml(tableStyle: "benchWebGrid",
+                headerStyle: "header",
+                alternatingRowStyle: "alt",
+                selectedRowStyle: "select",
+                mode: WebGridPagerModes.All,
+     firstText: "<< First",
+     previousText: "< Prev",
+     nextText: "Next >",
+     lastText: "Last >>",
+     htmlAttributes: new { id = "benchEmployeeGrid" },
+                columns: benchGrid.Columns(
+
+                    benchGrid.Column("",
+
+                        format: @<text>
+
+                    @*<button class="edit-book display-mode" id="@item.BenchEmployeeId">Edit</button>
+                        <button class="save-book edit-mode" id="@item.BenchEmployeeId">Save</button>*@
+
+                    <a><span class="ui-icon ui-icon-pencil" id="@item.BenchEmployeeId"></span></a>
+                    <a><span class="ui-icon ui-icon-circle-check" id="@item.BenchEmployeeId"></span></a>
+                    <a><span class="ui-icon ui-icon-closethick" id="@item.BenchEmployeeId"></span></a>
+                    <label id="lblBenchEmployeeID" style="display:none;">@item.BenchEmployeeId</label>
+                    </text>),
+            benchGrid.Column("Name",
+                        format: @<text>
+
+            @*@Html.TextBox("EmployeeNumber", item.EmployeeNumber, new { @class = "edit-mode", size = 45 })*@
+    <span size="10">@item.FirstName @item.LastName @item.EmployeeNumber</span>
+                    </text>),
+
+            benchGrid.Column("SPOC",
+                        header: "SPOC",
+                        format: @<text>
+                        <span id="SPOC" class="display-mode">@item.SPOC</span>
+                        <input type="text" class="edit-mode" id="txtSPOC" size="10" value="@item.SPOC" />
+                    </text>),
+            benchGrid.Column("ProjectCode",
+                        header: "Project Code",
+                        format: @<text>
+                        <span id="ProjectCode" class="display-mode">@item.ProjectCode</span>
+                        @*@Html.TextBox("EmployeeNumber", item.EmployeeNumber, new { @class = "edit-mode", size = 45 })*@
+                        <input type="text" class="edit-mode" size="10" id="txtProjectCode" value="@item.ProjectCode" />
+                    </text>),
+            benchGrid.Column("StartDate",
+                        header: "Start Date",
+                        format: @<text>
+                        <span id="StartDate" class="display-mode">@(@item.StartDate == null ? String.Empty : @item.StartDate.ToString("MM/dd/yyyy"))</span>
+                        <input type="text" readonly class="edit-mode date-picker start-date" style="width:100px;" value="@(@item.StartDate == null ? String.Empty : @item.StartDate.ToString("MM/dd/yyyy"))" />
+                    </text>),
+            benchGrid.Column("EndDate",
+                        header: "End Date",
+                        format: @<text>
+                        <span id="EndDate" class="display-mode">@(@item.EndDate == null ? String.Empty : @item.EndDate.ToString("MM/dd/yyyy"))</span>
+                        @*@Html.TextBox("EmployeeNumber", item.EmployeeNumber, new { @class = "edit-mode", size = 45 })*@
+                        <input type="text" readonly class="edit-mode date-picker end-date" style="width:100px;" value="@(@item.EndDate == null ? String.Empty : @item.EndDate.ToString("MM/dd/yyyy"))" />
+                    </text>),
+            benchGrid.Column("Utilization",
+                        header: "Utilization %",
+                        format: @<text>
+                        <span id="Utilization" class="display-mode">@item.Utilization</span>
+                        <input type="text" class="edit-mode" id="txtUtilization" size="3" value="@item.Utilization" />
+                    </text>),
+             benchGrid.Column("LocationType",
+                        header: "Location Type",
+                        format: @<text>
+                        <span id="LocationType" class="display-mode">@item.LocationType</span>
+                        @*@Html.TextBox("EmployeeNumber", item.EmployeeNumber, new { @class = "edit-mode", size = 45 })*@
+
+                        @Html.DropDownList("ddlLocationType", locationType, (string)item.LocationType, new { @class = "edit-mode" })
+
+                    </text>),
+            benchGrid.Column("Location",
+                        header: "Location",
+                        format: @<text>
+                        <span id="Location" class="display-mode">@item.Location</span>
+
+                        @Html.DropDownList("ddlLocation", location, (string)item.Location, new { @class = "edit-mode" })
+                    </text>),
+            benchGrid.Column("AssignmentStatus",
+                        header: "AssignmentStatus",
+                        format: @<text>
+                        <span id="AssignmentStatus" class="display-mode">@item.AssignmentStatus</span>
+                        @*@Html.TextBox("EmployeeNumber", item.EmployeeNumber, new { @class = "edit-mode", size = 45 })*@
+                        @*<input type="text" class="edit-mode" size="10" id="txtAssignmentStatus" value="@item.AssignmentStatus" />*@
+                        @Html.DropDownList("ddlAssignmentStatus", assignmentStatus, (string)item.AssignmentStatus, new { @class = "edit-mode" })
+                    </text>),
+            benchGrid.Column("Comments",
+                        header: "Comments",
+                        format: @<text>
+                        <span id="Comments" class="display-mode">@item.Comments</span>
+                        @*<input type="text" class="edit-mode" id="txtComments" size="10" value="@item.Comments" />*@
+                        <textarea rows="5" class="edit-mode" cols="20" id="txtComments">@item.Comments</textarea>
+                    </text>)
+                         
+                    @*benchGrid.Column("",
+
+                        format: @<text>
+                        <input type="button" id="btnMovetoProject" value="Move to Project" />
+                        </text>)*@
+
+
+
+         ))
+   
+</div>
+
+
+@*<script type="text/javascript">
+    function updateGrid() {
+        @Html.Raw(HttpUtility.HtmlDecode(benchGrid.GetContainerUpdateScript("/?page=" + (benchGrid.PageIndex + 1)).ToString()))
+    }
+    </script>*@
+
+@*<script type="text/javascript">
+    var callback = function (a) {
+        $('#benchEmployeeGrid').parent().undelegate('#benchEmployeeGrid a[data-swhglnk="true"]', 'click');
+    };
+</script>*@
+
+
